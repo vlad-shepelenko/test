@@ -1,0 +1,48 @@
+$var1: #cccccc
+$var2: #ffffff
+
+.form 
+	display: inline-block
+	padding: 25px
+	border: 1px solid $var1
+	border-radius: 5px
+	width: 500px
+	&__field 
+		margin-bottom: 10px
+	
+	&__error 
+		color: red
+		text-align: left
+		font-size: 12px
+		display: block
+		margin-top: 3px
+		display: none
+	
+	input 
+		outline: none
+		display: block
+		width: 100%
+		border-radius: 2px
+		border: 1px solid $var1
+		padding: 10px
+		box-sizing: border-box
+	
+	button 
+		width: 100%
+		padding: 10px
+		border-radius: 2px
+		border: 0
+		background-color: $var1
+		color: $var2
+	
+
+input:valid:not(:placeholder-shown) 
+	border-color: green
+
+input:invalid:not(:placeholder-shown) 
+	border-color: red
+	+ .form__error 
+		display: block
+
+button:hover 
+	background-color: blue 
